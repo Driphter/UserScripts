@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Reddit Wiki Text Fix
 // @namespace    https://github.com/Driphter/UserScripts
-// @version      0.1.1
+// @version      0.1.2
 // @description  Fixes text in tables that becomes unreadable on Reddit wikis when night mode is enabled.
 // @author       Driphter
 // @match        https://*.reddit.com/r/*/wiki/*
@@ -32,6 +32,6 @@ function getTextColor() {
     return color || DEFAULT_COLOR;
 }
 
-GM_addStyle(".md td, .md th { color: " + getTextColor() + "; }");
+GM_addStyle(".md { color: " + getTextColor() + "; }");
     
 })();
